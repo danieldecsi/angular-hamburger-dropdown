@@ -1,0 +1,18 @@
+<header>
+    <div *ngIf="isOpen" @overlay class="overlay" (click)="onOverlayClick()"></div>
+
+    <div class="menu">
+        <app-hamburger [active]="isOpen" (click)="onTriggerClick()"></app-hamburger>
+    
+        <div *ngIf="isOpen" @dropdown class="dropdown">
+            <a>Homepage</a>
+            <a>Profile</a>
+            <a>Symptom Checker</a>
+            <a>List of Doctors</a>
+            <a>Virtual Consultation</a>
+            <a>Settings</a>
+            <a>Medical history</a>
+            <a>Sign out</a>
+        </div>
+    </div>
+</header>
